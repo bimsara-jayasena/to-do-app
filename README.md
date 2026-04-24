@@ -66,12 +66,45 @@ Make sure you have the following installed on your machine:
 
 ## 📁 Project Structure
 
+ 
 ```
 src/
-├── components/       # Reusable UI components
-├── store/            # Zustand state management
-├── pages/            # App pages/views
-└── main.jsx          # App entry point
+├── api/
+│   └── task.api.ts         # Axios API calls
+├── app/
+│   └── store.ts            # Zustand store setup
+├── assets/                 # Static assets (images, SVGs)
+├── components/
+│   ├── Models/
+│   │   ├── CompleteTask.tsx # Mark task as complete modal
+│   │   ├── DeleteTask.tsx   # Delete confirmation modal
+│   │   └── EditTask.tsx     # Edit task modal
+│   ├── Button.tsx
+│   ├── Card.tsx
+│   ├── Dialog.tsx
+│   ├── EmptyPage.tsx
+│   ├── Input.tsx
+│   ├── Sonner.tsx
+│   ├── Toggle-group.tsx
+│   └── Toggle.tsx
+├── features/
+│   ├── slices/
+│   │   ├── task.completeSlice.ts
+│   │   ├── task.createSlice.ts
+│   │   ├── task.deleteSlice.ts
+│   │   ├── task.getAllSlice.ts
+│   │   └── task.updateSlice.ts
+│   └── types/
+│       └── task.type.ts     # TypeScript type definitions
+├── lib/
+│   └── utils.ts             # Utility/helper functions
+├── pages/
+│   └── Dashboard.tsx        # Main dashboard page
+├── styles/
+│   └── global.css
+├── App.css
+├── App.tsx
+└── index.css
 ```
 
 
