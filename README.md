@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# ✅ TaskFlow Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive Todo application built with **React**, featuring full CRUD functionality and a polished UI powered by shadcn/ui components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **View Tasks** — Browse all your todos in a clean, organized layout
+- **Add Tasks** — Quickly create new tasks with an intuitive form
+- **Update Tasks** — Edit existing tasks and mark them as complete
+- **Delete Tasks** — Remove tasks you no longer need
+- **Remote Data** — Bootstrapped with real data from [JSONPlaceholder](https://jsonplaceholder.typicode.com/todos)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer | Technology |
+|---|---|
+| Framework | [React](https://react.dev/) |
+| State Management | [Zustand](https://github.com/pmndrs/zustand) |
+| UI Components | [shadcn/ui](https://ui.shadcn.com/) |
+| Data Source | [JSONPlaceholder](https://jsonplaceholder.typicode.com/todos) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+
+2. **Navigate into the project directory**
+
+   ```bash
+   cd your-repo-name
+   ```
+
+3. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser** and visit `http://localhost:5173`
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── store/            # Zustand state management
+├── pages/            # App pages/views
+└── main.jsx          # App entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔗 API Reference
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This app uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/) as a mock REST API for initial task data.
+
+| Endpoint | Description |
+|---|---|
+| `GET /todos` | Fetch all todos |
+| `GET /todos/:id` | Fetch a single todo |
+| `POST /todos` | Create a new todo |
+| `PUT /todos/:id` | Update a todo |
+| `DELETE /todos/:id` | Delete a todo |
+
+> **Note:** JSONPlaceholder is a fake API — data changes are simulated and not persisted on the server. State is managed locally via Zustand.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+<p align="center">Made with ❤️ using React & shadcn/ui</p>
