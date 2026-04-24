@@ -22,7 +22,7 @@ A clean, responsive Todo application built with **React**, featuring full CRUD f
 | State Management | [Zustand](https://github.com/pmndrs/zustand) |
 | UI Components | [shadcn/ui](https://ui.shadcn.com/) |
 | Data Source | [JSONPlaceholder](https://jsonplaceholder.typicode.com/todos) |
-
+| HTTP Client | [Axios](https://axios-http.com/) |
 ---
 
 ## 📦 Getting Started
@@ -74,34 +74,5 @@ src/
 └── main.jsx          # App entry point
 ```
 
----
-
-## 🔗 API Reference
-
-This app uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/) as a mock REST API for initial task data.
-
-| Endpoint | Description |
-|---|---|
-| `GET /todos` | Fetch all todos |
-| `GET /todos/:id` | Fetch a single todo |
-| `POST /todos` | Create a new todo |
-| `PUT /todos/:id` | Update a todo |
-| `DELETE /todos/:id` | Delete a todo |
-
-> **Note:** JSONPlaceholder is a fake API — data changes are simulated and not persisted on the server. State is managed locally via Zustand.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🙌 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
-
----
 
 <p align="center">Made with ❤️ using React & shadcn/ui</p>
