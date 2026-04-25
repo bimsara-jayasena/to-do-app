@@ -45,7 +45,7 @@ Make sure you have the following installed on your machine:
 2. **Navigate into the project directory**
 
    ```bash
-   cd your-repo-name
+   cd to-do-app
    ```
 
 3. **Install dependencies**
